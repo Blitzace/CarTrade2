@@ -14,6 +14,11 @@
     <header: param>
       <h4 param="heading"><a><name/></a></h4>
     </header:>
+    <body: param>
+      <ht key="car.collection.count" count="&this.cars.size">
+         <count:cars param/>
+      </ht>
+    </body:>
   </card>
 </def>
 

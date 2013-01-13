@@ -96,6 +96,15 @@
 
     <content-body: param>
       <field-list fields="manufacturer" param/>
+      <section param="collection-section">
+        <h3 param="collection-heading">
+          <ht key="car.collection.heading" count="&this.cars.count" >
+            <human-collection-name collection="cars" your/>
+          </ht>
+        </h3>
+
+        <collection:cars param/>
+      </section>
     </content-body:>
 
   </page>
@@ -191,6 +200,7 @@
     <body: class="show-page car" param/>
 
     <content-header: param>
+      <a:brand param="parent-link">&laquo; <ht key="car.actions.back_to_parent" parent="Brand" name="&this">Back to <name/></ht></a:brand>
       <h2 param="heading">
         <ht key="car.show.heading" name="#{name(:no_wrapper => true)}">
           Car <name/>
@@ -209,7 +219,7 @@
     </content-header:>
 
     <content-body: param>
-      <field-list fields="vin, year, state, details, current_bid, buyout_price, ending_date, brand, manufacturer" param/>
+      <field-list fields="vin, year, state, details, current_bid, buyout_price, ending_date, manufacturer" param/>
     </content-body:>
 
   </page>

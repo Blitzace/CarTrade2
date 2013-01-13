@@ -22,8 +22,10 @@
     </header>
 
     <section class="content-body" if="&logged_in?">
-      <h3>Current Bids: </h3>
+      <h3>Posted Ads: </h3>
       <collection:cars with="&current_user"/>
+      <h3>Current Bids: </h3>
+      <p> No bids were made from your account </p>
     </section>
   </content:>
 

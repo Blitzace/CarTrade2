@@ -8,7 +8,7 @@ class Brand < ActiveRecord::Base
   end
   attr_accessible :name, :manufacturer, :manufacturer_id
   
-belongs_to :manufacturer, :inverse_of => :brands, :counter_cache => true
+belongs_to :manufacturer, :inverse_of => :brands
 has_many :cars, :dependent => :destroy, :inverse_of => :brand
   # --- Permissions --- #
 

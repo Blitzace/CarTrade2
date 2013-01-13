@@ -10,6 +10,8 @@ class Brand < ActiveRecord::Base
   
 belongs_to :manufacturer, :inverse_of => :brands
 has_many :cars, :dependent => :destroy, :inverse_of => :brand
+
+children :cars
   # --- Permissions --- #
 
   def create_permitted?

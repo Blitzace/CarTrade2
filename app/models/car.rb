@@ -16,7 +16,7 @@ class Car < ActiveRecord::Base
 belongs_to :brand, :inverse_of => :cars
 belongs_to :manufacturer, :inverse_of => :cars
 has_many :bids, :dependent => :destroy, :inverse_of => :car
-has_many :users, :through => :bids
+has_many :users, :accessible => true, :through => :bids
 belongs_to :owner, :class_name => "User", :creator => true, :inverse_of => :cars
 
   # --- Permissions --- #

@@ -14,3 +14,16 @@
 
 <include src="application"/>
 
+
+<extend tag="card" for="Car">
+  <old-card merge>
+    <append-body:>
+    <div class="Manufacturer">
+      Manufacturer: <repeat:manufacturers join=", "><a/></repeat><else>None</else>
+    </div>
+    <div class="Manufacturer">
+      Brand: <repeat:brands join=", "><a/></repeat><else>None</else>
+    </div>
+    </append-body:>
+  </old-card>
+</extend>

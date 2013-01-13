@@ -16,7 +16,7 @@
 <def tag="form" for="Car">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="vin, year, state, details, current_bid, buyout_price, ending_date, brand, manufacturer, owner" param/>
+    <field-list fields="vin, year, state, details, current_bid, buyout_price, ending_date, brand, manufacturer, owner, users" param/>
     <div param="actions">
       <submit label="#{ht 'car.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
