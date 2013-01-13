@@ -199,6 +199,8 @@
 
       <record-flags fields="" param/>
 
+      <a:owner param="creator-link"/>
+
       <a action="edit" if="&can_edit?" param="edit-link">
         <ht key="car.actions.edit" name="#{name(:no_wrapper => true)}">
           Edit Car
@@ -208,15 +210,6 @@
 
     <content-body: param>
       <field-list fields="vin, year, state, details, current_bid, buyout_price, ending_date, brand, manufacturer" param/>
-      <section param="collection-section">
-        <h3 param="collection-heading">
-          <ht key="user.collection.heading" count="&this.users.count" >
-            <human-collection-name collection="users" your/>
-          </ht>
-        </h3>
-
-        <collection:users param/>
-      </section>
     </content-body:>
 
   </page>
@@ -427,7 +420,6 @@
     <body: class="show-page user" param/>
 
     <content-header: param>
-      <a:cars param="parent-link">&laquo; <ht key="user.actions.back_to_parent" parent="Car" name="&this">Back to <name/></ht></a:cars>
       <h2 param="heading">
         <ht key="user.show.heading" name="#{name(:no_wrapper => true)}">
           User <name/>
@@ -445,15 +437,6 @@
 
     <content-body: param>
       <field-list fields="email_address, telephone, balance, state" param/>
-      <section param="collection-section">
-        <h3 param="collection-heading">
-          <ht key="car.collection.heading" count="&this.cars.count" >
-            <human-collection-name collection="cars" your/>
-          </ht>
-        </h3>
-
-        <collection:cars param/>
-      </section>
     </content-body:>
 
   </page>

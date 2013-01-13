@@ -20,9 +20,7 @@
 <def tag="card" for="Car">
   <card class="car" param="default" merge>
     <body: param>
-      <ht key="user.collection.count" count="&this.users.size">
-         <count:users param/>
-      </ht>
+      <a:owner param="creator-link"/>
     </body:>
   </card>
 </def>
@@ -40,11 +38,6 @@
     <header: param>
       <h4 param="heading"><a><name/></a></h4>
     </header:>
-    <body: param>
-      <ht key="car.collection.count" count="&this.cars.size">
-         <count:cars param/>
-      </ht>
-    </body:>
   </card>
 </def>
 

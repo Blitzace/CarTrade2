@@ -18,11 +18,11 @@ belongs_to :manufacturer, :inverse_of => :cars
 has_many :bids, :dependent => :destroy, :inverse_of => :car
 has_many :users, :through => :bids
 belongs_to :owner, :class_name => "User", :creator => true, :inverse_of => :car
-children :users
+
   # --- Permissions --- #
 
   def create_permitted?
-    acting_user.administrator?
+    owner_is? acting_user
   end
 
   def update_permitted?

@@ -17,8 +17,8 @@ belongs_to :brand, :inverse_of => :cars
 belongs_to :manufacturer, :inverse_of => :cars
 has_many :bids, :dependent => :destroy, :inverse_of => :car
 has_many :users, :through => :bids
-belongs_to :owner, :class_name => "User", :creator => true, :inverse_of => :car
-children :users
+belongs_to :owner, :class_name => "User", :creator => true, :inverse_of => :cars
+
   # --- Permissions --- #
 
   def create_permitted?
