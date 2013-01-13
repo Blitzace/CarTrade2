@@ -1,10 +1,46 @@
 <!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
 
 
+<def tag="form" for="Brand">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, manufacturer" param/>
+    <div param="actions">
+      <submit label="#{ht 'brand.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Car">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="vin, year, state, details, current_bid, buyout_price, ending_date, brand, manufacturer" param/>
+    <div param="actions">
+      <submit label="#{ht 'car.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Manufacturer">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name" param/>
+    <div param="actions">
+      <submit label="#{ht 'manufacturer.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
 <def tag="form" for="User">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="" param/>
+    <field-list fields="name, email_address, administrator, telephone, balance, state" param/>
     <div param="actions">
       <submit label="#{ht 'user.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

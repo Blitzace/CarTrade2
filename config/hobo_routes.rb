@@ -5,6 +5,18 @@
 CarTrade2::Application.routes.draw do
 
 
+  # Resource routes for controller brands
+  resources :brands
+
+
+  # Resource routes for controller manufacturers
+  resources :manufacturers
+
+
+  # Resource routes for controller cars
+  resources :cars
+
+
   # Resource routes for controller users
   resources :users, :only => [:edit, :show, :create, :update, :destroy] do
     collection do

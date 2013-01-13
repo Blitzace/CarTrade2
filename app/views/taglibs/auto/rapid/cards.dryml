@@ -1,11 +1,53 @@
 <!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
 
 
+<def tag="card" for="Bid">
+  <card class="bid" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Brand">
+  <card class="brand" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Car">
+  <card class="car" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+    <body: param>
+      <ht key="user.collection.count" count="&this.users.size">
+         <count:users param/>
+      </ht>
+    </body:>
+  </card>
+</def>
+
+<def tag="card" for="Manufacturer">
+  <card class="manufacturer" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+  </card>
+</def>
+
 <def tag="card" for="User">
   <card class="user" param="default" merge>
     <header: param>
       <h4 param="heading"><a><name/></a></h4>
     </header:>
+    <body: param>
+      <ht key="car.collection.count" count="&this.cars.size">
+         <count:cars param/>
+      </ht>
+    </body:>
   </card>
 </def>
 

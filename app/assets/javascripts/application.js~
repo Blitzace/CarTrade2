@@ -9,4 +9,12 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree ./application
-
+//= Event.addBehavior({
+//=
+//=    "form.car select.car-manufacturer:change": function(ev) {
+//=        Hobo.ajaxRequest(window.location.href, ['brand-menu'], 
+//=                         { params: Form.serializeElements($('brand-menu')), method: 'get',
+//=                           spinnerNextTo: this, message: ""} )
+//=    }
+//=
+//= })
