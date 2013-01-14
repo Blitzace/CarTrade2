@@ -3,7 +3,7 @@ you can place common code in this file. -->
 
 <extend tag="form" for="Car">
   <old-form merge>
-    <field-list: fields="vin, manufacturer, brand, year, state, details, current_bid, buyout_price, ending_date ">
+    <field-list: fields="name, vin, manufacturer, brand, year, state, details, current_bid, buyout_price, ending_date ">
       <manufacturer-view:>
         <select-one onchange="
           $('#brand-menu-form #manufacturer-field').val(this.value);

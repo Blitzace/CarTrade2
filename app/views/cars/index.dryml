@@ -1,0 +1,8 @@
+ <index-page>
+   <collection: replace>
+   <table-plus with="&@cars" fields="this, manufacturer, brand, state, details, current_bid, buyout_price">
+
+     <empty-message:>No cars match your criteria</empty-message:>
+   </table-plus>
+   </collection:>
+ </index-page>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130113120754) do
+ActiveRecord::Schema.define(:version => 20130114152711) do
 
   create_table "bids", :force => true do |t|
     t.integer  "amount"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20130113120754) do
     t.integer  "brand_id"
     t.integer  "manufacturer_id"
     t.integer  "owner_id"
+    t.string   "name"
   end
 
   add_index "cars", ["brand_id"], :name => "index_cars_on_brand_id"

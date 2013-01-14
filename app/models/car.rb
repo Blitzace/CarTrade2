@@ -3,6 +3,7 @@ class Car < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
+    name         :string
     vin          :string
     year         :string
     state        :string
@@ -12,7 +13,7 @@ class Car < ActiveRecord::Base
     ending_date :datetime
     timestamps
   end
-  attr_accessible :manufacturer, :manufacturer_id, :brand, :brand_id, :vin, :year, :state, :details, :current_bid, :buyout_price, :ending_date
+  attr_accessible :name, :manufacturer, :manufacturer_id, :brand, :brand_id, :vin, :year, :state, :details, :current_bid, :buyout_price, :ending_date
 belongs_to :brand, :inverse_of => :cars
 belongs_to :manufacturer, :inverse_of => :cars
 has_many :bids, :dependent => :destroy, :inverse_of => :car
