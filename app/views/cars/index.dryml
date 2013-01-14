@@ -1,6 +1,10 @@
+
  <index-page>
    <collection: replace>
-   <table-plus with="&@cars" fields="this, manufacturer, brand, state, details, current_bid, buyout_price">
+
+   <table-plus with="&@cars" fields="this, manufacturer, brand, state, details, current_bid, buyout_price, actions">
+            <actions-heading:></actions-heading:>
+      <actions-view:><bootstrap-table-actions/></actions-view:>
 
      <empty-message:>No cars match your criteria</empty-message:>
    </table-plus>
